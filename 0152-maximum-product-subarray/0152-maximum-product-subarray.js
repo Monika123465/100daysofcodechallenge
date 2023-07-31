@@ -10,12 +10,12 @@ var maxProduct = function(nums) {
   let lastMax = nums[0]
   let lastMin = nums[0]
   let max = nums[0]
-  for (var i = 1; i < nums.length; i++) {
+  for (let i = 1; i < nums.length; i++) {
     localMax = Math.max(lastMax * nums[i], lastMin * nums[i], nums[i])
     localMin = Math.min(lastMax * nums[i], lastMin * nums[i], nums[i])
-    max = Math.max(max, localMax);
-    lastMax = localMax;
-    lastMin = localMin;
+    max = Math.max(max, localMax)
+    lastMax = localMax
+    lastMin = localMin
   }
-  return max;
+  return max
 };
